@@ -1,0 +1,179 @@
+/*
+  Here are some additional color options: 
+  usfGreen: '#006747',
+  usfGold: '#CFC493',
+  usfEvergreen: '#005432',
+  usfSand: '#EDEBD1',
+  usfLemongrass: '#DBE442',
+  usfApple: '#9CCB3B',
+  usfTeal: '#009374',
+  usfSeaglass: '#80B0A6',
+  usfStorm: '#006484',
+  usfSilver: '#CAD2D8',
+  usfGray: '#7E96A0',
+  usfSlate: '#466069',)
+*/
+
+/* General styling for the entire application */
+.App {
+  font-family: sans-serif;
+  background: #006747;
+}
+
+/* University logo styling */
+.bullLogo {
+  position: absolute;
+  height: 250px;
+  width: 550px;
+  padding-left: 500px;
+  padding-top: 204px;
+}
+
+/* Styling for the to-do list */
+.checkbox-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.checkbox-list li::before {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.5em;
+}
+
+/* Styling for the title section */
+.titleFront {
+  color: #dbe442;
+}
+
+/* Styling for list items in the to-do list */
+.list-item input {
+  transform: scale(1.2); /* Slightly scale up the checkbox */
+  transition: transform 0.2s ease;
+}
+
+.list-item input:checked {
+  transform: scale(1.0); /* Scale up more when checked */
+}
+
+.list-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.list-item.completed label {
+  text-decoration: line-through;
+}
+
+.list-item {
+  position: relative;
+  display: flex;
+  background-color: #edebd1;
+  color: #006747;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 25px;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  gap: 25%;
+  text-align: justify;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  text-decoration: ${(props) => (props.completed ? 'line-through' : 'none')};
+}
+
+.checkbox-list {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding: 20px;
+}
+
+/* Styling for the delete button */
+.delete-button {
+  position: absolute;
+  left: 90%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Styling for the API call section */
+.API-call {
+  background-color: #006747;
+}
+
+/* Styling for the "Add Task" button */
+.add-task {
+  background-color: #9ccb3b;
+  box-shadow: 2px 2px #80b0a6, 2px 2px #80b0a6, 2px 2px #80b0a6;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.add-task:active {
+  background-color: #9ccb3b;
+  box-shadow: 2px 2px #80b0a6, 2px 2px #80b0a6, 2px 2px #80b0a6;
+  border: 2px solid #9ccb3b;
+}
+
+/* Styling for the input field in the to-do list */
+.add-task-input {
+  padding: 10px;
+  border: 1px solid #9ccb3b;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+/* Styling for the contact card */
+.card {
+  position: relative;
+  color: #006747;
+  background-color: #edebd1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  display: flex;
+}
+
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the contact information */
+.contact {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  padding: 40px 16px;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Styling for the user profile picture */
+.profilePic {
+  padding-top: 5%;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+}
+
+.cardInfo {
+  flex: 1;
+  font-size: 15px;
+  columns: 2;
+}
